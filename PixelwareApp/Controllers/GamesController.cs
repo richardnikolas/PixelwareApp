@@ -24,7 +24,7 @@ namespace PixelwareApp.Controllers
 
         public ViewResult Index()
         {
-            var games = _context.Games.ToList();
+            var games = _context.Games.Include(g => g.Genre).ToList();
             return View(games);
         }
 

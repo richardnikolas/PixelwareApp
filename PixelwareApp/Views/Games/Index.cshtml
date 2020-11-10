@@ -13,20 +13,19 @@
 }
 else
 {
-	<table class="table table-bordered table-hover">
-		<thead>
-			<tr>
-				<th>Game</th>
-			</tr>
-		</thead>
-		<tbody>
-			@foreach (var game in Model)
-			{
-				<tr>
-					<td>@game.Name</td>
-				</tr>
-			}
-		</tbody>
-	</table>
+
+	<section class="games-section">
+		@foreach (var game in Model)
+		{
+			<a class="game-card" style="background-image: url(@game.CoverImage)" href="/Games/Details/@game.Id">
+				<div class="game-card-content">
+					<h2 class="game-card-title">@game.Name</h2>
+					<p class="game-card-copy">@game.Description</p>
+					<button class="game-card-btn">Comprar</button>
+				</div>
+			</a>
+		}
+	</section>
+
 }
 

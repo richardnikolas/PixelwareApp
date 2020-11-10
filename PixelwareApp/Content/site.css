@@ -11,6 +11,7 @@ body {
 }
 
 .body-content {
+    width: 85%;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -25,13 +26,14 @@ textarea {
     max-width: 280px;
 }
 
-footer {
-    width: 95%;
-    position: absolute;
-    bottom: 0;
-    border-top: 1px solid #CCC;
-    padding-top: 10px;
-    margin: 5px 40px;
+.justify-at-center {
+    display: flex;
+    justify-content: center;
+}
+
+.company-name {
+    font-family: 'Fredoka One';
+    font-size: 80px;
 }
 
 .navbar {
@@ -76,9 +78,55 @@ footer {
         -webkit-transition: background-color 0.3s ease;
     }
 
+.main-banner {
+    width: 100%;
+    height: 520px;
+    background-image: url('Images/gamer_setup.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.footer-banner {
+    width: 100%;
+    height: 290px;
+    background-image: url('Images/horizon-4.jpg');
+    background-size: cover;
+    background-position-y: 350px;
+}
+
+.main-title {
+    font-size: 72px;
+    text-align: center;
+    margin-top: 15px;
+    font-weight: 700;
+}
+
 .page-title {
     margin-bottom: 20px;
 }
+
+.main-content {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    font-size: 20px;
+}
+
+.button-get-to-know {
+    width: 90%;
+    height: 80px;
+    color: #FFF;
+    background-color: var(--primary-blue);
+    border: 1px solid var(--primary-blue);
+    border-radius: 10px;
+    margin-top: 30px;
+    font-size: 20px;
+}
+
+    .button-get-to-know:hover {
+        color: var(--primary-orange);
+        font-weight: bold;
+        transition: color 0.3s ease;
+    }
 
 .publishers-section {
     display: grid;
@@ -96,13 +144,18 @@ footer {
     margin: 10px;
 }
 
-    .publisher-card:hover {
-        background-color: var(--primary-blue);
-        transition: background-color 0.3s ease;
+    .publisher-card a {
+        color: var(--primary-blue);
     }
 
-    .publisher-card:hover a {        
-        color: var(--primary-orange);  
+    .publisher-card:hover {
+        background-color: var(--primary-blue);
+        transition: background-color 0.2s linear;
+    }
+
+    .publisher-card:hover a {
+        color: var(--primary-orange);
+        transition: background-color 0.2s linear;
     }
 
     .publisher-card p {
