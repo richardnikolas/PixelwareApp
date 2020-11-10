@@ -5,20 +5,22 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="page-title" style="margin-left: 10px">Publishers</h2>
+<div class="inner-content">
+	<h2 class="page-title" style="margin-left: 10px">Publishers</h2>
 
-@if (!Model.Any())
-{
-	<p>We don't have any publishers registered yet.</p>
-}
-else
-{
-	<section class="publishers-section">
-		@foreach (var publisher in Model)
-		{
-			<div class="publisher-card">
-				@Html.ActionLink(publisher.Name, "Details", "Publishers", new { id = publisher.Id }, new { @class = "publisher-card-title" })
-			</div>
-		}
-	</section>
-}
+	@if (!Model.Any())
+	{
+		<p>We don't have any publishers registered yet.</p>
+	}
+	else
+	{
+		<section class="publishers-section">
+			@foreach (var publisher in Model)
+			{
+				<div class="publisher-card">
+					@Html.ActionLink(publisher.Name, "Details", "Publishers", new { id = publisher.Id }, new { @class = "publisher-card-title" })
+				</div>
+			}
+		</section>
+	}
+</div>

@@ -10,7 +10,8 @@
   grid-gap: 1rem;
   padding: 1rem;
   max-width: 1024px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  color: #FFF; }
   @media (min-width: 600px) {
     .games-section {
       grid-template-columns: repeat(2, 1fr); } }
@@ -71,15 +72,21 @@
     margin-top: 1rem; }
 
 .game-card-title {
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: bold;
   line-height: 1.2;
   color: #FFF; }
 
-.game-card-copy {
+.game-card-description {
   font-size: 1rem;
   font-style: italic;
-  line-height: 1.35; }
+  line-height: 1.35;
+  white-space: pre-wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 250px;
+  max-height: 130px;
+  opacity: 0; }
 
 .game-card-btn {
   cursor: pointer;
@@ -91,7 +98,8 @@
   text-transform: uppercase;
   color: white;
   background-color: black;
-  border: none; }
+  border: none;
+  opacity: 0; }
   .game-card-btn:hover {
     background-color: #0d0d0d; }
   .game-card-btn:focus {
@@ -104,12 +112,12 @@
   .game-card-content {
     transform: translateY(calc(100% - 4.5rem)); }
     .game-card-content > *:not(.title) {
-      opacity: 0;
       transform: translateY(1rem);
       transition: transform var(--delay) var(--cubic), opacity var(--delay) var(--cubic); }
   .game-card:hover,
   .game-card:focus-within {
-    align-items: center; }
+    align-items: center;
+    text-decoration: none; }
     .game-card:hover:before,
     .game-card:focus-within:before {
       transform: translateY(-4%); }

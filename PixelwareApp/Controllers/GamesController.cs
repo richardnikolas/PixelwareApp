@@ -24,13 +24,13 @@ namespace PixelwareApp.Controllers
 
         public ViewResult Index()
         {
-            var games = _context.Games.Include(g => g.Genre).ToList();
+            var games = _context.Games.ToList();
             return View(games);
         }
 
         public ActionResult Details(int id)
         {
-            var game = _context.Games.SingleOrDefault(g => g.Id == id);
+            var game = _context.Games.Include(g => g.Genre).Include(g => g.Publisher).SingleOrDefault(g => g.Id == id);
 
             if (game == null)
                 return HttpNotFound();

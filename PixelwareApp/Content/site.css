@@ -6,14 +6,13 @@
 }
 
 body {
-    padding-bottom: 20px;
+    padding-bottom: 0;
     font-family: Roboto, "Source Sans Pro", 'Franklin Gothic Medium', Arial, sans-serif;
 }
 
 .body-content {
-    width: 85%;
-    padding-left: 15px;
-    padding-right: 15px;
+    width: 100%;
+    padding: 0;
 }
 
 .dl-horizontal dt {
@@ -36,9 +35,11 @@ textarea {
     font-size: 80px;
 }
 
+
+
 .navbar {
     background: linear-gradient(rgb(12, 22, 61) 30%, rgb(0, 0, 0) 90%);
-    margin-bottom: 25px;
+    border-style: none;
     border-left: 0;
     border-right: 0;
     color: #FFF;
@@ -49,7 +50,7 @@ textarea {
 }
 
 .navbar-brand {
-    font-size: 26px;
+    font-size: 30px;
     padding: 8px 100px 8px 50px;
     color: #FFF;
     font-family: 'Fredoka One';
@@ -91,7 +92,7 @@ textarea {
     height: 290px;
     background-image: url('Images/horizon-4.jpg');
     background-size: cover;
-    background-position-y: 350px;
+    background-position-y: 360px;
 }
 
 .main-title {
@@ -103,12 +104,24 @@ textarea {
 
 .page-title {
     margin-bottom: 20px;
+    font-size: 32px;
+}
+
+@media (min-width: 1600px) {
+    .page-title {
+        margin-left: 10%;
+    }
 }
 
 .main-content {
-    margin-top: 80px;
-    margin-bottom: 80px;
+    margin: 80px 0 80px 0;
     font-size: 20px;
+}
+
+.inner-content {
+    max-width: 80%;
+    margin: 0 auto;
+    margin-top: 25px;
 }
 
 .button-get-to-know {
@@ -195,5 +208,43 @@ textarea {
 @keyframes textclip {
     to {
         background-position: 200% center;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding-bottom: 15px;
+    }
+
+    .navbar-brand {
+        padding: 8px 100px 8px 10px;
+    }
+
+    .main-nav-item {
+        padding: 14px 14px 14px 10px;
+    }
+
+    .company-name {
+        font-size: 60px;
+    }
+
+    .main-title {
+        font-size: 42px;
+    }
+
+    .inner-content {
+        max-width: 85%;
+    }
+
+    .main-content {
+        margin: 50px 0 80px 0;
+        text-align: center;
+    }
+
+    .footer-banner {
+        height: 180px;
+        background-repeat: no-repeat;
+        background-position-y: -40px;
     }
 }

@@ -5,27 +5,27 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2 class="page-title">Games</h2>
+<div class="inner-content">
+	<h2 class="page-title">Games</h2>
 
-@if (!Model.Any())
-{
-	<p>We don't have any games registered yet.</p>
-}
-else
-{
-
-	<section class="games-section">
-		@foreach (var game in Model)
-		{
-			<a class="game-card" style="background-image: url(@game.CoverImage)" href="/Games/Details/@game.Id">
-				<div class="game-card-content">
-					<h2 class="game-card-title">@game.Name</h2>
-					<p class="game-card-copy">@game.Description</p>
-					<button class="game-card-btn">Comprar</button>
-				</div>
-			</a>
-		}
-	</section>
-
-}
+	@if (!Model.Any())
+	{
+		<p>We don't have any games registered yet.</p>
+	}
+	else
+	{
+		<section class="games-section">
+			@foreach (var game in Model)
+			{
+				<a class="game-card" style="background-image: url(@game.CoverImage)" href="/Games/Details/@game.Id">
+					<div class="game-card-content">
+						<h2 class="game-card-title">@game.Name</h2>
+						<p class="game-card-description">@game.Description</p>
+						<button class="game-card-btn">Comprar</button>
+					</div>
+				</a>
+			}
+		</section>
+	}
+</div>
 

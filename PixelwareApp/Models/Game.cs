@@ -15,6 +15,11 @@ namespace PixelwareApp.Models
         [Display(Name = "Genre")]
         [Required]
         public byte GenreId { get; set; }
+
+        public Publisher Publisher { get; set; }
+        [Display(Name = "Publisher")]
+        [Required]
+        public byte PublisherId { get; set; }
         
         public DateTime ReleaseDate { get; set; }
     }
