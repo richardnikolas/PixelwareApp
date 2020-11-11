@@ -5,7 +5,21 @@
 	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
-<h3>@Model.Genre.Name</h3>
-<h4>@Model.Publisher.Name</h4>
+<section id="game-details-section">
+	<div class="game-details-card">
+		<div class="game-details-image-container" style="background-image: url(@Model.CoverImage)">
+
+		</div>
+		<div class="game-details-information">
+			<h2>Nome: <span class="game-details-name">@Model.Name</span></h2>
+			<h4><b>Gênero:</b> @Model.Genre.Name</h4>
+			<h4><b>Publisher:</b> @Model.Publisher.Name</h4>
+			<h4><b>Data de lançamento:</b> @Model.ReleaseDate.ToUniversalTime().ToString("dd/MM/yyyy")</h4>
+			<h4><b>Descrição:</b> @Model.Description</h4>
+		</div>
+	</div>
+	
+</section>
+
+
 

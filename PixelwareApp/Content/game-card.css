@@ -1,9 +1,10 @@
 ﻿:root {
-  --primary-blue: #0c163d;
-  --primary-orange: #e26b00;
-  --primary-yellow: #f4c500;
-  --delay: 700ms;
-  --cubic: cubic-bezier(0.19, 1, 0.22, 1); }
+    --primary-blue: #0c163d;
+    --primary-orange: #e26b00;
+    --primary-yellow: #ffe10e;
+    --delay: 700ms;
+    --cubic: cubic-bezier(0.19, 1, 0.22, 1);
+}
 
 .games-section {
   display: grid;
