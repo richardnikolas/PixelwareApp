@@ -1,6 +1,8 @@
 ﻿
 $bp-md: 600px;
-$bp-lg: 800px;
+$bp-xmd: 800px;
+$bp-lg: 1200px;
+$bp-xlg: 1640px;
 
 :root {
 	--primary-blue: #0c163d;
@@ -12,9 +14,9 @@ $bp-lg: 800px;
 
 .games-section {
 	display: grid;
-	grid-gap: 1rem;
+	grid-gap: 1.2rem;
 	padding: 1rem;
-	max-width: 1024px;
+	max-width: 90%;
 	margin: 0 auto;
 	color: #FFF;
 
@@ -22,8 +24,16 @@ $bp-lg: 800px;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
-	@media (min-width: $bp-lg) {
+	@media (min-width: $bp-xmd) {
+		grid-template-columns: repeat(3, 1fr);
+	}
+
+	@media (min-width: $bp-xlg) {
 		grid-template-columns: repeat(4, 1fr);
+	}
+
+	@media (min-width: $bp-xlg) {
+		grid-template-columns: repeat(5, 1fr);
 	}
 }
 
@@ -38,6 +48,7 @@ $bp-lg: 800px;
 	color: whitesmoke;
 	background-size: cover;
 	background-color: whitesmoke;
+	background-position: center;
 	box-shadow: 0 1px 1px rgba(0,0,0,0.1), 0 2px 2px rgba(0,0,0,0.1), 0 4px 4px rgba(0,0,0,0.1), 0 8px 8px rgba(0,0,0,0.1), 0 16px 16px rgba(0,0,0,0.1);
 
 	@media (min-width: $bp-md) {
@@ -93,6 +104,8 @@ $bp-lg: 800px;
 	font-weight: bold;
 	line-height: 1.2;
 	color: #FFF;
+	background-color: rgba(0,0,0, 0.7);
+	border-radius: 10px;
 }
 
 .game-card-description {
@@ -165,6 +178,10 @@ $bp-lg: 800px;
 				transform: translateY(0);
 				transition-delay: calc(var(--delay) / 8);
 			}
+		}
+
+		.game-card-title {
+			background-color: transparent;
 		}
 	}
 
