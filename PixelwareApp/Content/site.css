@@ -120,6 +120,7 @@ textarea {
     max-width: 80%;
     margin: 0 auto;
     margin-top: 25px;
+    padding-bottom: 50px;
 }
 
 .button-get-to-know {
@@ -146,10 +147,9 @@ textarea {
 }
 
 .publisher-card {
-    border: 1px solid #000;
-    border-left: 20px solid var(--primary-blue);
+    border: 6px solid var(--primary-blue);
     border-radius: 10px;
-    width: 100%;
+    width: 95%;
     height: 120px;
     font-size: 30px;
     margin: 10px;

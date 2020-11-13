@@ -37,24 +37,5 @@ namespace PixelwareApp.Controllers
 
             return View(game);
         }
-
-        public ViewResult Random()
-        {
-            var game = new Game() { Name = "Cyberpunk 2077" };
-            var publishers = new List<Publisher>
-            {
-                new Publisher { Name = "Keanu Reeves" },
-                new Publisher { Name = "Will Smith" }
-            };
-
-            var viewModel = new RandomMovieViewModel
-            {
-                Game = game,
-                Publishers = publishers
-            };
-
-            return View(viewModel);
-        }
-
     }
 }
