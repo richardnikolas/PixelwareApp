@@ -1,10 +1,7 @@
-﻿using PixelwareApp.ViewModels;
-using PixelwareApp.Models;
-using System;
+﻿using PixelwareApp.Models;
 using System.Linq;
 using System.Web.Mvc;
 using System.Data.Entity;
-using System.Collections.Generic;
 
 namespace PixelwareApp.Controllers
 {
@@ -30,7 +27,10 @@ namespace PixelwareApp.Controllers
 
         public ActionResult Details(int id)
         {
-            var game = _context.Games.Include(g => g.Genre).Include(g => g.Publisher).SingleOrDefault(g => g.Id == id);
+            var game = _context.Games
+                            .Include(g => g.Genre)
+                            .Include(g => g.Publisher)
+                            .SingleOrDefault(g => g.Id == id);
 
             if (game == null)
                 return HttpNotFound();

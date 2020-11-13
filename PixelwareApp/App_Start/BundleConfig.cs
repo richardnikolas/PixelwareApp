@@ -26,10 +26,6 @@ namespace PixelwareApp
                       "~/Content/bootstrap-lumen.css",
                       "~/Content/site.css",
                       "~/Content/game-card.css"));
-
-            bundles.Add(new StyleBundle("~/Content/scss").Include(
-                "~/Content/game-card.scss"
-            ));
         }
     }
 }

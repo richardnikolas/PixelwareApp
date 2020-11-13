@@ -90,7 +90,7 @@
 .game-card-description {
   font-size: 1rem;
   font-style: italic;
-  line-height: 1.35;
+  line-height: 1.35rem;
   white-space: pre-wrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -106,8 +106,8 @@
   font-weight: bold;
   letter-spacing: 0.025rem;
   text-transform: uppercase;
-  color: white;
-  background-color: black;
+  color: #FFF;
+  background-color: #000;
   border: none;
   opacity: 0; }
   .game-card-btn:hover {

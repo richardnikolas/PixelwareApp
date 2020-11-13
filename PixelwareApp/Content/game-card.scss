@@ -112,7 +112,7 @@ $bp-xlg: 1640px;
 .game-card-description {
 	font-size: 1rem;
 	font-style: italic;
-	line-height: 1.35;
+	line-height: 1.35rem;
 	white-space: pre-wrap;
 	overflow: hidden;
 	text-overflow: ellipsis;
@@ -129,13 +129,13 @@ $bp-xlg: 1640px;
 	font-weight: bold;
 	letter-spacing: 0.025rem;
 	text-transform: uppercase;
-	color: white;
-	background-color: black;
+	color: #FFF;
+	background-color: #000;
 	border: none;
 	opacity: 0;
 
 	&:hover {
-		background-color: lighten(black, 5%);
+		background-color: lighten(#000, 5%);
 	}
 
 	&:focus {
